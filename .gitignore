@@ -1,0 +1,12 @@
+node_modules
+.next
+.vercel
+.env*
+!.env.example
+*.tsbuildinfo
+
+.source
+app/icon.png
+app/apple-icon.png
+app/favicon.ico
+public/opengraph-image.png
