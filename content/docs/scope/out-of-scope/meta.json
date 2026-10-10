@@ -1,0 +1,14 @@
+{
+  "title": "Out of scope",
+  "pages": [
+    "frozen-misc-skills",
+    "harness-name-collisions",
+    "lazy-load-writing-for-agents",
+    "mainstream-issue-trackers-only",
+    "native-question-tool",
+    "new-skills",
+    "question-limits",
+    "setup-skill-verify-mode",
+    "subagent-recursion"
+  ]
+}
