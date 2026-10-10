@@ -1,0 +1,25 @@
+{
+  "title": "Skills",
+  "pages": [
+    "index",
+    "---Guide---",
+    "01-install",
+    "02-setup",
+    "03-align",
+    "04-language",
+    "05-spec",
+    "06-wayfinder",
+    "07-build",
+    "08-design",
+    "09-ship",
+    "10-shelf",
+    "---Explanations---",
+    "explanations",
+    "---Source---",
+    "source",
+    "glossary",
+    "scope",
+    "repo",
+    "about"
+  ]
+}

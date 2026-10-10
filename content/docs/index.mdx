@@ -1,0 +1,62 @@
+---
+title: "The skills guide"
+---
+
+These skills are small, composable practices for working with a coding agent. You invoke the ones that orchestrate. The agent can also reach for the ones that hold a reusable discipline. This guide is the reading order. The explanations and the skill source sit behind it.
+
+Here's what you'll learn:
+
+1. [Install the skills](/docs/01-install). Use the install command for your agent, and pick one route.
+2. [Run setup once per repo](/docs/02-setup). Tell the skills where issues live, what the triage labels are called, and where the domain docs sit.
+3. [Grill the plan](/docs/03-align). `/grill-me` or `/grill-with-docs` until you and the agent share one understanding.
+4. [Build a shared language](/docs/04-language). Terms land in `GLOSSARY.md`. Hard decisions land as ADRs.
+5. [Write the spec and the tickets](/docs/05-spec). `/to-spec`, then `/to-tickets`.
+6. [Plan past one session](/docs/06-wayfinder). `/wayfinder` when the effort does not fit in one conversation.
+7. [Implement with a feedback loop](/docs/07-build). `/implement`, `/implement-spec`, `/tdd`, and `/diagnosing-bugs`.
+8. [Keep the modules deep](/docs/08-design). `/codebase-design`, `/improve-codebase-architecture`, and `/prototype`.
+9. [Review and ship](/docs/09-ship). `/code-review`, `/pr`, then `/retro`.
+10. [Use the rest of the shelf](/docs/10-shelf). Triage, research, wizards, and the productivity skills.
+
+Read the pages in order the first time. After that, each page stands alone.
+
+## If you only remember one thing
+
+Grill the plan in the repo before anyone writes code:
+
+```text
+/grill-with-docs
+```
+
+Say what you want to change, in your own words. The skill interviews you, writes settled terms to `GLOSSARY.md` as they resolve, and writes an ADR only when a decision is hard to reverse, surprising without context, and a real trade-off.
+
+The main build chain is:
+
+```text
+grill-with-docs → to-spec → to-tickets → implement → code-review → retro
+```
+
+You do not have to name every step. When you are unsure which skill fits, run `/ask-matt` and describe the situation.
+
+<div className="reference-shelves">
+  <h2>Reference library</h2>
+  <div>
+    <a href="/docs/explanations/engineering">
+      <strong>Engineering explanations</strong>
+      <span>The long-form page for each code skill: what it does, when to reach for it, and how you know it worked.</span>
+    </a>
+    <a href="/docs/explanations/productivity">
+      <strong>Productivity explanations</strong>
+      <span>Grill-me, handoff, teach, questionnaires, and writing for agents.</span>
+    </a>
+    <a href="/docs/source">
+      <strong>Skill source</strong>
+      <span>Each SKILL.md and the notes that sit beside it, copied from the repository.</span>
+    </a>
+    <a href="/docs/glossary">
+      <strong>Glossary and scope</strong>
+      <span>The repository's own vocabulary, and the bar an idea has to clear.</span>
+    </a>
+  </div>
+</div>
+
+Next: [Install the skills](/docs/01-install).
