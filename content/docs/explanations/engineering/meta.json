@@ -1,0 +1,27 @@
+{
+  "title": "Engineering",
+  "pages": [
+    "index",
+    "ask-matt",
+    "setup-matt-pocock-skills",
+    "grill-with-docs",
+    "domain-modeling",
+    "to-spec",
+    "to-tickets",
+    "wayfinder",
+    "implement",
+    "implement-spec",
+    "tdd",
+    "diagnosing-bugs",
+    "codebase-design",
+    "improve-codebase-architecture",
+    "prototype",
+    "code-review",
+    "pr",
+    "retro",
+    "triage",
+    "research",
+    "wizard",
+    "resolving-merge-conflicts"
+  ]
+}
