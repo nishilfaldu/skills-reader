@@ -1,0 +1,9 @@
+{
+  "title": "Domain Modeling",
+  "pages": [
+    "index",
+    "adr-format",
+    "agents",
+    "glossary-format"
+  ]
+}
