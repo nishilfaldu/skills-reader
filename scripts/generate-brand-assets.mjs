@@ -44,4 +44,4 @@ const canvas = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630
   <text x="75" y="573" fill="#525252" font-family="Helvetica Neue, Arial, sans-serif" font-size="22">skills-reader.vercel.app</text>
 </svg>`;
 await sharp(Buffer.from(canvas)).png({ compressionLevel: 9 }).toFile(join(root, 'public/opengraph-image.png'));
-console.log('Generated favicon, app icons, and 1200\u00d7630 share image.');
+console.log('Generated favicon, app icons, and 1200×630 share image.');
