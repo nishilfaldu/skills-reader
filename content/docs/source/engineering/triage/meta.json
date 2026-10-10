@@ -1,0 +1,9 @@
+{
+  "title": "Triage",
+  "pages": [
+    "index",
+    "agent-brief",
+    "agents",
+    "out-of-scope"
+  ]
+}
