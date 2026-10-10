@@ -1,0 +1,21 @@
+---
+title: "About this reader"
+---
+
+This is an unofficial reading site for [Matt Pocock's skills](https://github.com/mattpocock/skills). It is not affiliated with Matt Pocock.
+
+The guide is a reading order for the skills: install, setup, grill, glossary, spec, tickets, implementation, design, and review. The explanations are the human-facing pages from `docs/` in that repository. The source library is the `SKILL.md` files and the notes beside them. Those copied pages keep their upstream license, which is MIT. The notice is in `UPSTREAM-LICENSE` in this repository.
+
+The content was copied from commit [`49dd158d1076134a641b33efb035946536778336`](https://github.com/mattpocock/skills/tree/49dd158d1076134a641b33efb035946536778336). Install commands in the guide are the canonical blocks from [`.agents/install-block.md`](https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/.agents/install-block.md). Each copied page ends with a link to its source file at that commit.
+
+Published skill pages on AI Hero use the same explanations, at `https://aihero.dev/skills-<skill-name>`. This site republishes them so they can be read as one guide, with the skill source beside them.
+
+To refresh the copy, check out that repository and run:
+
+```bash
+python3 scripts/sync-content.py
+npm run check:content
+npm run build
+```
+
+The sync script reads `/tmp/mattpocock-skills` and rewrites links between copied pages. Guide chapters are not overwritten.

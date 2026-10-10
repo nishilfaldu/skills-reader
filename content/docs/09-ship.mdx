@@ -1,0 +1,32 @@
+---
+title: "Review, open the PR, then retro"
+---
+
+`/implement` already closes with code review. You can also run the review on its own, against any fixed point:
+
+```text
+/code-review
+```
+
+[`/code-review`](/docs/explanations/engineering/code-review) splits the diff since a commit, branch, tag, or merge-base into two axes, reviewed by separate subagents so they do not contaminate each other:
+
+- **Standards.** Does the change follow the repo's coding standards, plus a Fowler smell baseline?
+- **Spec.** Does it faithfully implement the originating issue or spec?
+
+The pull request body has its own shape. [`/pr`](/docs/explanations/engineering/pr) is model-invoked when you are writing a PR. The body is a summary that makes the change visible, evidence that it works, and a merge-danger call: one-way or two-way door, and how wide the blast radius is.
+
+After the session, while the misses are still fresh:
+
+```text
+/retro
+```
+
+[`/retro`](/docs/explanations/engineering/retro) suggests improvements to the agent's environment: navigation, automated checks, coding standards, steering files, tooling. It lists the most severe first. It is about the environment the next session will inherit, not a recap of the diff.
+
+That closes the main chain:
+
+```text
+grill-with-docs → to-spec → to-tickets → implement → code-review → retro
+```
+
+Next: [Triage, research, and the rest of the shelf](/docs/10-shelf).

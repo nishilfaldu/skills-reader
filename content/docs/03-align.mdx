@@ -1,0 +1,33 @@
+---
+title: "Grill the plan before anyone writes code"
+---
+
+The usual failure is misalignment. You thought the agent understood the change. The diff shows it did not. Grilling is the interview that closes that gap before code exists.
+
+Which skill you type depends on what is in front of you:
+
+| What you have | Reach for |
+| --- | --- |
+| You are not working in a repo | [`/grill-me`](/docs/explanations/productivity/grill-me) |
+| A repo, and a change you can settle in one session | [`/grill-with-docs`](/docs/explanations/engineering/grill-with-docs) |
+| An effort too big to hold in one session | [`/wayfinder`](/docs/06-wayfinder) |
+| A decision blocked on someone else's knowledge | [`/to-questionnaire`](/docs/explanations/productivity/to-questionnaire) |
+
+`/grill-with-docs` is the one to reach for inside a codebase:
+
+```text
+/grill-with-docs
+```
+
+Describe the change in your own words. It asks a round of questions, waits, then asks the next round. Questions the codebase can answer, it answers by reading the code. When a term resolves, it writes that term to `GLOSSARY.md` immediately. An ADR is rarer: the decision has to be hard to reverse, surprising without context, and a real trade-off.
+
+`/grill-me` is the same interview with no repo and no files. Both of them drive [`/grilling`](/docs/explanations/productivity/grilling), which is the model-invoked interview primitive. You do not have to type `/grilling` yourself.
+
+Two failure modes are worth knowing before you trust a session:
+
+- No `GLOSSARY.md` appeared. Either nothing new was named, or the skill ran inside another orchestrator and the writing half did not fire. Check the working directory.
+- Every question arrived at once, with no mention of the glossary. The agent did not load `grilling` and `domain-modeling`. Ask it which skills it loaded.
+
+When the session ends, stay in the same conversation and run [`/to-spec`](/docs/05-spec). The glossary is not a spec. Most of what you decided lives only in that conversation until you write it down.
+
+Next: [Build a shared language](/docs/04-language).

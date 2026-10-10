@@ -1,0 +1,23 @@
+---
+title: "Run setup once per repo"
+---
+
+Installation puts the skills on the agent. Setup tells them how this repository works. Run it once per repo, before the other engineering skills:
+
+```text
+/setup-matt-pocock-skills
+```
+
+[`/setup-matt-pocock-skills`](/docs/explanations/engineering/setup-matt-pocock-skills) asks three things:
+
+- Where issues live: GitHub, GitLab, local markdown files, or another tracker you describe.
+- What the triage labels are called. The defaults are `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, and `wontfix`. Keep them unless the tracker already uses other names.
+- Where the domain docs sit. Almost every repo is single-context: one `GLOSSARY.md` and `docs/adr/` at the root.
+
+It explores the repo first, recommends an answer, and waits for you before it writes. The record lands in `docs/agents/` and in an `## Agent skills` section of `CLAUDE.md` or `AGENTS.md`, whichever file the repo already has.
+
+You can read the skill's own instructions at [`setup-matt-pocock-skills`](/docs/source/engineering/setup-matt-pocock-skills). The issue-tracker notes it can follow are [GitHub](/docs/source/engineering/setup-matt-pocock-skills/issue-tracker-github), [GitLab](/docs/source/engineering/setup-matt-pocock-skills/issue-tracker-gitlab), and [local markdown](/docs/source/engineering/setup-matt-pocock-skills/issue-tracker-local).
+
+After setup, start the work in the same repo. The next conversation can assume the tracker and the glossary location are known.
+
+Next: [Grill the plan before anyone writes code](/docs/03-align).

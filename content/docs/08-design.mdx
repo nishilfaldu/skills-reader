@@ -1,0 +1,27 @@
+---
+title: "Keep the modules deep"
+---
+
+Agents speed up coding, and they speed up entropy with it. The counterweight in this shelf is designing deep modules: a lot of behaviour behind a small interface, at a clean seam, testable through that interface.
+
+[`/codebase-design`](/docs/explanations/engineering/codebase-design) is the shared vocabulary: module, interface, depth, seam, adapter, leverage, locality. The agent can reach for it while designing. The deepening notes beside the skill are [DESIGN-IT-TWICE.md](/docs/source/engineering/codebase-design/design-it-twice) and [DEEPENING.md](/docs/source/engineering/codebase-design/deepening).
+
+When you want a survey of an existing codebase, run:
+
+```text
+/improve-codebase-architecture
+```
+
+[`/improve-codebase-architecture`](/docs/explanations/engineering/improve-codebase-architecture) looks for shallow modules, presents the candidates as an HTML report, and then grills you through the one you pick. It is a survey. On an old codebase it will find real candidates. It will not untangle the mud for you. Run it every few days, not as a rescue.
+
+When the open question is "does this state model feel right?" or "what should this screen look like?", build a throwaway instead of production code:
+
+```text
+/prototype
+```
+
+[`/prototype`](/docs/explanations/engineering/prototype) answers one question and then gets thrown away. Logic prototypes are one shareable HTML file. UI prototypes are several variations you can toggle from one route. The briefs are [LOGIC.md](/docs/source/engineering/prototype/logic) and [UI.md](/docs/source/engineering/prototype/ui).
+
+`/to-spec` also asks which modules you are touching before the spec is published. That question is the design check inside the build chain, even when you never open these skills by name.
+
+Next: [Review, open the PR, then retro](/docs/09-ship).

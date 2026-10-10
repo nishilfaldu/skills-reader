@@ -1,0 +1,25 @@
+---
+title: "Turn the conversation into a spec and tickets"
+---
+
+Grilling leaves the decisions in the conversation. The next two skills write them down without interviewing you again.
+
+Run them in the same chat, in this order:
+
+```text
+/to-spec
+```
+
+```text
+/to-tickets
+```
+
+[`/to-spec`](/docs/explanations/engineering/to-spec) synthesises what you already discussed and publishes a spec to the issue tracker from setup. It does not start a new interview. Re-read the spec against your own answers. Precise decisions (ordering, negative requirements, numbers) are the ones a summary is most likely to soften.
+
+[`/to-tickets`](/docs/explanations/engineering/to-tickets) breaks that spec, or the conversation itself, into tracer-bullet tickets. Each ticket declares what it blocks and what it is blocked by. On GitHub or GitLab those edges are native links. In a local tracker they are text in the ticket file.
+
+If the change is small enough to build immediately, you can skip ahead to [`/implement`](/docs/07-build) after `/to-spec`. Tickets earn their place when more than one slice of work has to land, or when you want the agent to be able to pick the work up later.
+
+`/to-spec` and `/to-tickets` both assume setup has already recorded the issue tracker. If the agent says it does not know where issues live, go back to [`/setup-matt-pocock-skills`](/docs/02-setup).
+
+Next: [Plan work that does not fit one session](/docs/06-wayfinder).

@@ -1,0 +1,23 @@
+---
+title: "Build a shared language"
+---
+
+Agents spend words rediscovering the project's jargon. A glossary gives the project one word for each idea, so later sessions can use that word instead of renegotiating it.
+
+[`/domain-modeling`](/docs/explanations/engineering/domain-modeling) is the discipline `/grill-with-docs` drives. You can also invoke it when you are editing `GLOSSARY.md` or an ADR directly. It challenges a term that conflicts with the glossary, and it updates the files inline.
+
+A grilling session produces three different kinds of record:
+
+| What resolved | Where it lands |
+| --- | --- |
+| A term: the project's own word for a thing | `GLOSSARY.md`, as soon as it resolves |
+| A decision that is hard to reverse, surprising without context, and a real trade-off | An ADR under `docs/adr/` |
+| Everything else | The conversation only |
+
+The glossary is vocabulary. It does not hold implementation detail, a spec, or scratch notes. A session that sharpens the glossary and writes no ADR is working as designed.
+
+The repository's own glossary is published here as a sample of the form: [Glossary](/docs/glossary). The format the skill writes is in [GLOSSARY-FORMAT.md](/docs/source/engineering/domain-modeling/glossary-format) and [ADR-FORMAT.md](/docs/source/engineering/domain-modeling/adr-format).
+
+If the repo has no domain docs at all, point `/grill-with-docs` at the repo rather than at a feature and ask it to help you document what is already there. You still decide which of the words in the code are the right ones.
+
+Next: [Turn the conversation into a spec and tickets](/docs/05-spec).

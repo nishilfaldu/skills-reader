@@ -1,0 +1,42 @@
+---
+title: "Triage, research, and the rest of the shelf"
+---
+
+The build chain is the daily path. The rest of the shelf is what you reach for when the situation is different. If you cannot tell which skill fits, start here:
+
+```text
+/ask-matt
+```
+
+[`/ask-matt`](/docs/explanations/engineering/ask-matt) is a router over the user-invoked skills. Describe the situation. It names the skill or the flow.
+
+## Engineering, outside the build chain
+
+- [`/triage`](/docs/explanations/engineering/triage) moves issues through triage roles: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. The label strings for this repo are in [triage labels](/docs/explanations/agents/triage-labels).
+- [`/research`](/docs/explanations/engineering/research) investigates a question against primary sources and leaves a cited Markdown file in the repo.
+- [`/wizard`](/docs/explanations/engineering/wizard) generates an interactive bash script for steps only a human can perform: credentials, a third-party dashboard, a one-off migration. The template is [template.sh](/docs/source/engineering/wizard/template).
+
+## Productivity
+
+These are not code-specific. The same install covers them.
+
+- [`/grill-me`](/docs/explanations/productivity/grill-me) interviews you when there is no repo.
+- [`/handoff`](/docs/explanations/productivity/handoff) compacts the conversation into a handoff document so another agent can continue.
+- [`/teach`](/docs/explanations/productivity/teach) teaches one topic across sessions, using the current directory as the workspace.
+- [`/to-questionnaire`](/docs/explanations/productivity/to-questionnaire) turns a decision you cannot answer into a Markdown questionnaire for the person who can.
+- [`/wait-what`](/docs/explanations/productivity/wait-what) re-pitches the last message in plain language, using the glossary, when it did not land.
+- [`/writing-for-agents`](/docs/explanations/productivity/writing-for-agents) is the reference for skills, `AGENTS.md`, and `CLAUDE.md`.
+
+`misc/` is frozen. `in-progress/` is public and not part of the plugin. `deprecated/` is unused. Their source is in the [source library](/docs/source) so you can read them, and they are not on the install path for the managed plugin.
+
+To add one skill on its own, later, use the single-skill command:
+
+```bash
+npx skills@latest add mattpocock/skills --skill=<name>
+```
+
+```bash
+npx skills@latest update <name>
+```
+
+The explanations are the long-form pages. The source library is the `SKILL.md` the agent actually loads.

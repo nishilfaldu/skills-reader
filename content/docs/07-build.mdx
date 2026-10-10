@@ -1,0 +1,39 @@
+---
+title: "Implement with a feedback loop"
+---
+
+Once the spec exists, building is a separate skill. Point the agent at work that has already been decided.
+
+For one ticket or a small set:
+
+```text
+/implement
+```
+
+For a whole spec, on one integration branch, with tickets worked as a graph:
+
+```text
+/implement-spec
+```
+
+[`/implement`](/docs/explanations/engineering/implement) builds the work described by a spec or tickets. It drives [`/tdd`](/docs/explanations/engineering/tdd) at the seams you already agreed, and it closes with [`/code-review`](/docs/09-ship) before committing.
+
+[`/implement-spec`](/docs/explanations/engineering/implement-spec) runs that same close across the ready frontier of the ticket graph, using implementer subagents where tickets are unblocked.
+
+`/tdd` is the feedback loop inside the build: one failing test, then just enough code to pass it, then the next behaviour. You can also invoke it directly when you want a feature or a bugfix done test-first:
+
+```text
+/tdd
+```
+
+The standards it carries for tests and mocks are in [tests.md](/docs/source/engineering/tdd/tests) and [mocking.md](/docs/source/engineering/tdd/mocking).
+
+When something is broken or slow and you do not yet know why, switch to diagnosis instead of another implementation pass:
+
+```text
+/diagnosing-bugs
+```
+
+[`/diagnosing-bugs`](/docs/explanations/engineering/diagnosing-bugs) builds a loop that goes red on this bug, minimises it, ranks hypotheses, instruments, fixes, and leaves a regression test. It is model-invoked, so the agent can reach for it when you report something failing. Typing it keeps the loop explicit.
+
+Next: [Keep the modules deep](/docs/08-design).

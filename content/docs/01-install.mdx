@@ -1,0 +1,74 @@
+---
+title: "Install the skills"
+---
+
+A plugin updates itself. [skills.sh](https://skills.sh/mattpocock/skills) copies editable files into your project, and you update them by hand. Pick one per agent, because installing both gives you every skill twice.
+
+Managed installs come first. They update without you running a command. skills.sh is the fallback, and it is labelled manual updates. The commands below are the canonical install block from [`.agents/install-block.md`](/docs/repo/install-block).
+
+## Claude Code
+
+```bash
+claude plugin install mattpocock-skills@claude-plugins-official
+```
+
+Updates itself by default.
+
+## Codex
+
+```bash
+codex plugin marketplace add mattpocock/skills
+codex plugin add mattpocock-skills@mattpocock
+```
+
+Updates itself at startup.
+
+## GitHub Copilot (CLI and VS Code)
+
+```bash
+copilot plugin marketplace add mattpocock/skills
+copilot plugin install mattpocock-skills@mattpocock
+```
+
+Then, once, add to `~/.copilot/settings.json`:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "mattpocock": { "source": { "source": "github", "repo": "mattpocock/skills" }, "autoUpdate": true }
+  }
+}
+```
+
+In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.com/mattpocock/skills`. It updates daily.
+
+## Gemini CLI
+
+```bash
+gemini skills install https://github.com/mattpocock/skills.git --path skills/engineering
+gemini skills install https://github.com/mattpocock/skills.git --path skills/productivity
+```
+
+Re-run both commands to update.
+
+## Every other agent, or editable files
+
+```bash
+npx skills@latest add mattpocock/skills -a <agent>  # cursor, opencode, devin, windsurf, amp, pi; omit -a to choose
+```
+
+When the installer asks which skills to take, include `setup-matt-pocock-skills`. To update, run `npx skills@latest update`, and re-run `add` to pick up new skills.
+
+Use the single-skill form wherever one skill is named on its own:
+
+```bash
+npx skills@latest add mattpocock/skills --skill=<name>
+```
+
+```bash
+npx skills@latest update <name>
+```
+
+`skills@latest` is the pinned spelling.
+
+Next: [Run setup once per repo](/docs/02-setup).
