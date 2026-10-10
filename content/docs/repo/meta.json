@@ -1,0 +1,13 @@
+{
+  "title": "Repo notes",
+  "pages": [
+    "index",
+    "agents",
+    "claude",
+    "install-block",
+    "invocation",
+    "writing-docs",
+    "adr",
+    "claude-plugin"
+  ]
+}
