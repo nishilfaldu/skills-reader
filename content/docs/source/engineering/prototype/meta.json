@@ -1,0 +1,9 @@
+{
+  "title": "Prototype",
+  "pages": [
+    "index",
+    "agents",
+    "logic",
+    "ui"
+  ]
+}
