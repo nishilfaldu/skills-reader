@@ -1,0 +1,12 @@
+{
+  "title": "Setup Matt Pocock Skills",
+  "pages": [
+    "index",
+    "agents",
+    "domain",
+    "issue-tracker-github",
+    "issue-tracker-gitlab",
+    "issue-tracker-local",
+    "triage-labels"
+  ]
+}
