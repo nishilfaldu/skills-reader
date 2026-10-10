@@ -25,6 +25,8 @@ Updates itself at startup.
 
 ## GitHub Copilot (CLI and VS Code)
 
+Use the marketplace, not `copilot plugin install mattpocock/skills`. Copilot has deprecated direct repo installs, and they can't auto-update.
+
 ```bash
 copilot plugin marketplace add mattpocock/skills
 copilot plugin install mattpocock-skills@mattpocock
@@ -44,6 +46,8 @@ In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.c
 
 ## Gemini CLI
 
+Gemini doesn't read `.claude-plugin`, and `--path` takes one bucket. One install per promoted bucket is the whole promoted set.
+
 ```bash
 gemini skills install https://github.com/mattpocock/skills.git --path skills/engineering
 gemini skills install https://github.com/mattpocock/skills.git --path skills/productivity
@@ -52,6 +56,8 @@ gemini skills install https://github.com/mattpocock/skills.git --path skills/pro
 Re-run both commands to update.
 
 ## Every other agent, or editable files
+
+Prefer skills.sh to an agent's own repo installer, such as `amp skill add` or `pi install git:…`, because those also pull in `misc/` and `in-progress/`. Nobody has run Auggie, Droid, Qwen or Goose against this repo, so they stay on skills.sh until someone does.
 
 ```bash
 npx skills@latest add mattpocock/skills -a <agent>  # cursor, opencode, devin, windsurf, amp, pi; omit -a to choose

@@ -27,4 +27,4 @@ Copied material keeps its upstream MIT license in `UPSTREAM-LICENSE`. The guide 
 
 ## Deployment
 
-This repository deploys to Vercel as `skills-reader`. The canonical URL is [skills-reader.vercel.app](https://skills-reader.vercel.app). Favicon, Apple touch icon, and the social preview can be regenerated with `npm run generate:brand`.
+This repository deploys to Vercel as `skills-reader`. The canonical URL is [matt-skills-reader.nishilfaldu.site](https://matt-skills-reader.nishilfaldu.site). Favicon, Apple touch icon, and the social preview can be regenerated with `npm run generate:brand`.

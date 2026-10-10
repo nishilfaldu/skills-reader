@@ -1,4 +1,4 @@
-export const siteUrl = 'https://skills-reader.vercel.app';
+export const siteUrl = 'https://matt-skills-reader.nishilfaldu.site';
 export const siteName = 'skills reader';
 export const siteDescription = 'A reading guide for Matt Pocock\'s agent skills, plus the explanations and skill source from the repository.';
 export const shareImage = '/opengraph-image.png';

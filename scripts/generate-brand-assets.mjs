@@ -41,7 +41,7 @@ const canvas = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630
   <text x="75" y="250" fill="#171717" font-family="Helvetica Neue, Arial, sans-serif" font-size="78" font-weight="700" letter-spacing="-4">The skills</text>
   <text x="75" y="338" fill="#171717" font-family="Helvetica Neue, Arial, sans-serif" font-size="78" font-weight="700" letter-spacing="-4">guide</text>
   <text x="78" y="404" fill="#525252" font-family="Helvetica Neue, Arial, sans-serif" font-size="26">Matt Pocock's agent skills, in reading order.</text>
-  <text x="75" y="573" fill="#525252" font-family="Helvetica Neue, Arial, sans-serif" font-size="22">skills-reader.vercel.app</text>
+  <text x="75" y="573" fill="#525252" font-family="Helvetica Neue, Arial, sans-serif" font-size="22">matt-skills-reader.nishilfaldu.site</text>
 </svg>`;
 await sharp(Buffer.from(canvas)).png({ compressionLevel: 9 }).toFile(join(root, 'public/opengraph-image.png'));
 console.log('Generated favicon, app icons, and 1200×630 share image.');
