@@ -1,0 +1,10 @@
+{
+  "title": "Misc",
+  "pages": [
+    "index",
+    "git-guardrails-claude-code",
+    "migrate-to-shoehorn",
+    "scaffold-exercises",
+    "setup-pre-commit"
+  ]
+}
