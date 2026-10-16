@@ -15,7 +15,7 @@ Open http://localhost:3000. `npm run check:content` checks routes, source covera
 
 ## Refresh from upstream
 
-The current content was copied from `mattpocock/skills` commit `49dd158d1076134a641b33efb035946536778336`. Clone that commit to `/tmp/mattpocock-skills`, then run:
+A GitHub Action (`.github/workflows/sync-upstream.yml`) syncs every 6 hours and pushes only on change. To run it by hand, clone `mattpocock/skills` (set `SKILLS_SOURCE`, default `/tmp/mattpocock-skills`, and `SKILLS_COMMIT` to its HEAD SHA), then run:
 
 ```bash
 python3 scripts/sync-content.py

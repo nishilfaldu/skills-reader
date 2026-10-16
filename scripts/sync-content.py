@@ -3,15 +3,16 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
 from pathlib import Path, PurePosixPath
 
-SOURCE = Path('/tmp/mattpocock-skills')
+SOURCE = Path(os.environ.get('SKILLS_SOURCE', '/tmp/mattpocock-skills'))
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = ROOT / 'content/docs'
 MAP_FILE = ROOT / 'lib/upstream-paths.json'
-COMMIT = '49dd158d1076134a641b33efb035946536778336'
+COMMIT = os.environ.get('SKILLS_COMMIT', '49dd158d1076134a641b33efb035946536778336')
 REPO = 'https://github.com/mattpocock/skills'
 GUIDE = [
     '01-install', '02-setup', '03-align', '04-language', '05-spec',
@@ -240,6 +241,11 @@ def main() -> None:
 
     engineering = ordered(stems('engineering'), ENGINEERING)
     productivity = ordered(stems('productivity'), PRODUCTIVITY)
+    unknown = [f'engineering/{n}' for n in engineering if n not in ENGINEERING]
+    unknown += [f'productivity/{n}' for n in productivity if n not in PRODUCTIVITY]
+    for name in unknown:
+        print(f'::warning title=Unknown upstream skill::{name} is not in the ordering list in scripts/sync-content.py; it was appended alphabetically')
+    (ROOT / '.unknown-skills').write_text(''.join(n + '\n' for n in unknown))
     agents = stems('agents')
     write_meta(PurePosixPath('explanations'), 'Explanations', ['index', 'engineering', 'productivity', 'agents'])
     (TARGET / 'explanations/index.mdx').write_text(

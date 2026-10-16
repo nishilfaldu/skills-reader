@@ -20,7 +20,7 @@ Four sections make a page worth reading: `What it does`, `When to reach for it`,
 
 **A page carries no install commands.** The ai-hero page template renders the install widget itself (a copy button, the single-skill command, the whole-set command, and the update line) above the body. A page that also writes them out shows the reader the same command twice, and the two copies drift: the hand-written pair on every page went stale against the widget beside it. Install wording is a property of the site, not of the page. If it needs changing, change it in ai-hero; the canonical wording lives in [the install block](/docs/repo/install-block).
 
-&lt;page-template&gt;
+&lt;page-template>
 
 ## What it does
 
@@ -31,13 +31,13 @@ One or two plain-language paragraphs. Lead with the skill's one-sentence job, th
 How and when you reach for the skill, in two beats that are both effectively always present:
 
 - **Invocation mode.** State whether you type it or the agent fires it. A user-invoked skill: "You invoke this by typing `/<name>`, and the agent won't reach for it on its own." A model-invoked skill: "Type `/<name>`, or the agent reaches for it automatically when a task fits."
-- **Trigger boundary.** The index entry: "reach for this when …". Where the skill is confusable with a sibling, add the other half: "for &lt;X&gt; instead, use [&lt;sibling&gt;](https://aihero.dev/skills-&lt;sibling&gt;)."
+- **Trigger boundary.** The index entry: "reach for this when …". Where the skill is confusable with a sibling, add the other half: "for &lt;X> instead, use [&lt;sibling>](https://aihero.dev/skills-&lt;sibling>)."
 
 ## Prerequisites
 
 Optional: include only when the skill needs something in place to be functional; omit the heading entirely otherwise. Covers: a **workspace it writes into** (a stateful skill like `grill-with-docs` writes `GLOSSARY.md` and ADRs; `teach` builds a whole directory, so say what it writes and where), **prior setup** (`triage`/`to-spec`/`to-tickets` need `setup-matt-pocock-skills` to have configured an issue tracker), or **repo-specific tooling**. A stateless skill that runs anywhere has no prerequisites, so drop the section.
 
-## &lt;free-form middle&gt;
+## &lt;free-form middle>
 
 One to three short sections, in the skill's *own vocabulary*, that make it click. Choose whatever headings fit the skill: the loop it runs, the artifact it produces, the fork it makes, the one anti-pattern it kills. There is no prescribed heading; the skills are too heterogeneous for one.
 
@@ -69,7 +69,7 @@ Always present. Situate the skill in the system in a sentence or two:
 - **Neighbours.** The one or two siblings that matter, each with a because-clause, linked absolutely.
 - **The map.** Point to [ask-matt](https://aihero.dev/skills-ask-matt), the router over the whole set, so this page stays a node and never has to redraw the graph.
 
-&lt;/page-template&gt;
+&lt;/page-template>
 
 ## Conventions
 

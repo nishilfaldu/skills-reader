@@ -1,0 +1,48 @@
+name: Sync upstream skills
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sync-upstream
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch mattpocock/skills
+        run: |
+          git clone -q --depth 1 https://github.com/mattpocock/skills.git /tmp/mattpocock-skills
+          echo "SKILLS_COMMIT=$(git -C /tmp/mattpocock-skills rev-parse HEAD)" >> "$GITHUB_ENV"
+      - name: Regenerate content
+        run: npm run sync
+      - name: Flag unknown skills
+        run: |
+          if [ -s .unknown-skills ]; then
+            { echo "### Unknown upstream skills (add to ENGINEERING/PRODUCTIVITY in scripts/sync-content.py)"; sed 's/^/- /' .unknown-skills; } >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Check content
+        run: npm run check:content
+      - name: Build
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+      - name: Commit and push if changed
+        run: |
+          if [ -z "$(git status --porcelain -- content lib)" ]; then
+            echo "Already up to date"; exit 0
+          fi
+          git config user.name "skills-sync[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content lib
+          git commit -m "sync: mattpocock/skills@${SKILLS_COMMIT::7}"
+          git push origin HEAD:main
