@@ -1,0 +1,11 @@
+{
+  "title": "Software Factory",
+  "pages": [
+    "index",
+    "example-tasks",
+    "git-hosts",
+    "observability-platforms",
+    "runners",
+    "ticket-trackers"
+  ]
+}
