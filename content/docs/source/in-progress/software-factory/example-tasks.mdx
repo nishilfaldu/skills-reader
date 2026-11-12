@@ -8,7 +8,7 @@ Tasks grouped by the problem they solve. Each names the trigger that starts its 
 
 **Explore task**
 - Trigger: a ticket is created, or a human labels it.
-- Does: checks the ticket against the codebase and sorts it into a category (easy call, needs a human, not a bug).
+- Does: checks the ticket's claims against the codebase, reproducing them where it can, sorts it into a category (easy call, needs a human, not a bug), and leaves its findings on the ticket for the implementer. It never pushes.
 - Triggers: an implementer run for easy calls. Anything else ends with the ticket labelled as waiting for a human.
 
 ## Ready tickets wait for someone to build them
@@ -81,4 +81,4 @@ A monitor (slow queries, error rates) is a ticket source. It files a ticket per 
 - Does: reads the PR, its ticket, its automated reviews and its run logs, and proposes changes to the factory's own instructions as a PR.
 - Triggers: an automated review run.
 
-Source: [`skills/in-progress/software-factory/EXAMPLE-TASKS.md`](https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/in-progress/software-factory/EXAMPLE-TASKS.md)
+Source: [`skills/in-progress/software-factory/EXAMPLE-TASKS.md`](https://github.com/mattpocock/skills/blob/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/in-progress/software-factory/EXAMPLE-TASKS.md)

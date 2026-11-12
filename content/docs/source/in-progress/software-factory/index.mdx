@@ -11,7 +11,7 @@ A **software factory** is a system of agents that turns tickets, PRs and schedul
 
 **Task**:
 A kind of work the factory performs, defined once and run many times: review, explore, implement, ratchet. A task may work on a ticket, a PR, or the codebase as a whole.
-_Avoid_: job, workflow, action
+_Avoid_: job, workflow, action, as names for the task. A CI vendor's workflow file and its jobs are where a task is wired up, not the task.
 
 **Trigger**:
 The event that starts a run: a change in the ticket tracker or git host, a clock in the orchestrator, or another run.
@@ -98,4 +98,4 @@ For each ticket source, answer: what stops it filing the same ticket twice?
 
 A design is finished when every slot names a product (or, for the observability platform, a deliberate none) and every task and ticket source has an answer to every question.
 
-Source: [`skills/in-progress/software-factory/SKILL.md`](https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/in-progress/software-factory/SKILL.md)
+Source: [`skills/in-progress/software-factory/SKILL.md`](https://github.com/mattpocock/skills/blob/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/in-progress/software-factory/SKILL.md)
